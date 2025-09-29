@@ -24,15 +24,7 @@ Use this as a loose study guide to walk through the main themes of the course so
   - `cargo run --release` → optimized compile + run
   - `cargo check` → quickly checks for errors (no binary output)
 
-## 2. Compiled vs Interpreted Languages
-
-- **Compiled language**: code translated fully to machine code before running (e.g., Rust, C).
-- **Interpreted language**: executed line by line at runtime (e.g., Python).
-- Rust is compiled → faster, but longer feedback cycle.
-- **Compiler error**: caught before the program runs.
-- **Runtime error**: occurs while executing (e.g., division by zero).
-
-## 3. Rust Syntax and Types
+## 2. Rust Syntax and Types
 
 - Rust functions require explicit type annotations on parameters.
 - Tuples: access with `.0`, `.1`, etc.
@@ -41,7 +33,7 @@ Use this as a loose study guide to walk through the main themes of the course so
   - `vec![1,2,3]` is a vector, growable at runtime.
 - Range syntax: `1..5` excludes 5, `1..=5` includes 5.
 
-## 4 Derive
+## 3. Derive
 
 - **`#[derive(Debug)]`** → enables `{:?}` printing.
 - **`#[derive(PartialEq)]`** → enables `==` and `!=` comparisons.
@@ -50,7 +42,7 @@ Use this as a loose study guide to walk through the main themes of the course so
   - **Copy**: Allows for a variable to be `copied` or assigned using `=` (Ex: `let copied = old_var`)
   - **Eq**: Requires `PartialEq`, types cannot contain floats
 
-## 5. Error Handling
+## 4. Error Handling
 
 - **`panic!`** → unrecoverable errors, program crashes.
 - **`Option<T>`**: use when something may or may not exist (Some/None).
@@ -59,7 +51,7 @@ Use this as a loose study guide to walk through the main themes of the course so
 - **`match`**: safe, explicit way to handle all Result/Option cases.
 - **? operator**: propagates errors upward.
 
-## 6. Pattern Matching
+## 5. Pattern Matching
 
 - `match` can destructure enums, tuples, and use guards.
 - Example:
@@ -75,13 +67,13 @@ Use this as a loose study guide to walk through the main themes of the course so
 - Always make sure match arms cover all possibilities.
 - Underscore `_` is a wildcard pattern, like `else`.
 
-## 7. Enums
+## 6. Enums
 
 - Enums define finite choices (like Coin, Status, Result).
 - Deriving traits on enums/structs allows equality, debugging, etc.
 - Enums often paired with `match` for branching logic.
 
-## 8. Control Flow
+## 7. Control Flow
 
 - `if/else` expressions return values.
 - `loop`, `while`, `for` for iteration.
@@ -89,7 +81,7 @@ Use this as a loose study guide to walk through the main themes of the course so
 - `for item in array` or `for (index, value) in array.iter().enumerate()` to cleanly iterate over arrays.
 - `break` exits a loop, `continue` skips to next iteration.
 
-## 9. Functions and Return Values
+## 8. Functions and Return Values
 
 - Functions must declare input and output types.
 - Default return = `()` if nothing specified.
@@ -102,7 +94,7 @@ Use this as a loose study guide to walk through the main themes of the course so
   }
   ```
 
-## 10. Common Bugs and Fixes
+## 9. Common Bugs and Fixes
 
 - Use `==` not `=` for equality tests.
 - Variables are immutable unless declared `mut`.
