@@ -28,19 +28,19 @@ Use this as a loose study guide to walk through the main themes of the course so
 
 - Rust functions require explicit type annotations on parameters.
 - Tuples: access with `.0`, `.1`, etc.
-- Arrays vs Vectors:
+- Arrays:
   - `[1,2,3]` is an array of fixed size.
-  - `vec![1,2,3]` is a vector, growable at runtime.
+  - Initialize an array of size n with `[val; n]`
+  - Access values with `arr[1]`
 - Range syntax: `1..5` excludes 5, `1..=5` includes 5.
 
 ## 3. Derive
 
 - **`#[derive(Debug)]`** → enables `{:?}` printing.
 - **`#[derive(PartialEq)]`** → enables `==` and `!=` comparisons.
-- Other common derives: `Clone`, `Copy`, `Eq`
-  - **Clone**: Allows a `struct` or `enum` to use the `.clone()` method.
-  - **Copy**: Allows for a variable to be `copied` or assigned using `=` (Ex: `let copied = old_var`)
-  - **Eq**: Requires `PartialEq`, types cannot contain floats
+- **`#[derive(Clone)]`**: Allows a `struct` or `enum` to use the `.clone()` method.
+- **`#[derive(Copy)]`**: Requires `Clone` Allows for a variable to be `copied` or assigned using `=` (Ex: `let copied = old_var`)
+- **`#[derive(PEq)]`**: Requires `PartialEq`, types cannot contain floats
 
 ## 4. Error Handling
 
