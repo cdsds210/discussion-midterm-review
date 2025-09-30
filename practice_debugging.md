@@ -37,7 +37,7 @@ fn main() {
 ## C
 
 ```rust
-fn fibonacci(n: u8) -> u8 {
+fn fibonacci(n: u32) -> u32 {
     if n > 20 {
         return Err("Too Large");
     }
