@@ -5,7 +5,7 @@ fn main() {
 fn uses_match(option1: Option<i32>, option2: Option<i32>) -> i32 {
     match (option1, option2) {
         (Some(v1), Some(v2)) => return v1 + v2,
-        _ => panic!("Expected a value in option, got None.")
+        _ => panic!("Expected a value in both options, got None.")
     }
 }
 
