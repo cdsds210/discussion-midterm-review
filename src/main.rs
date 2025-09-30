@@ -2,16 +2,30 @@ fn main() {
     println!("Hello, world!");
 }
 
-fn uses_match(option1: Option<i32>, option2: Option<i32>) -> i32 {
-    match (option1, option2) {
-        (Some(v1), Some(v2)) => return v1 + v2,
-        _ => panic!("Expected a value in both options, got None.")
-    }
+/// A basic function that takes two Options, and sums them
+fn sum_options(option1: Option<i32>, option2: Option<i32>) -> i32 {
+    // Do this manually using match
+    unimplemented!();
 }
 
 fn uses_unwrap(option1: Option<i32>, option2: Option<i32>) -> i32 {
     // Will cause a panic! with a default error msg if None
     return option1.unwrap() + option2.unwrap();
+}
+
+// What if we want specific error messages for which option doesn't have a value? 
+fn manual_expect(option1: Option<i32>, option2: Option<i32>) -> i32 {
+    let v1 = match option1{
+        Some(v) => v,
+        None => panic!("Option1 was None"),
+    };
+    
+    let v2 = match option2{
+        Some(v) => v,
+        None => panic!("Option 2 was None"),
+    };
+
+    return v1 + v2;
 }
 
 fn uses_expect(option1: Option<i32>, option2: Option<i32>) -> i32 {
