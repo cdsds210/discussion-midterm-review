@@ -8,6 +8,11 @@ Use this as a loose study guide to walk through the main themes of the course so
 - **`ls -la`** → lists all files (including hidden ones) in long format.
 - **`cat`** → prints the contents of a file
 - **`touch`** → initializes a new file
+- **`rmdir`** → Deletes a directory
+  - What happesn on a "full" directory
+- **`rm`** → Deletes a file
+  - What happens on a directory?
+  - How can you delete a "full" directory
 
 - **`git init`** creates a new git repository
 - **`git clone <url>`** clones a github repository into a directory of the same name
