@@ -52,6 +52,11 @@ It’s shorthand for early-return handling, so you don’t need to write out a f
 
 Helps keep functions concise while still handling errors
 
+```rust
+fn unwraps_enum(e: Option<i32>)
+
+```
+
 ## Practice Classification (`Option`, `Result`, or `panic`)
 
 1. Looking up a key in a hashmap

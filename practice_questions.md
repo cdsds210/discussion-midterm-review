@@ -10,6 +10,8 @@ Write a function `factorial()` that for an input `n`:
 - RETURNS an Error "Too Large" if `n > 20`
 - Otherwise calculates the factorial of `n` recursively
 
+> Thought question: If `fn main() -> {}` uses factorial should it use `.expect()`, `.unwrap()`, or `?`
+
 ## Q2: Student Grading
 
 Define an enum `Grade` with two possible fields, `Failing` and `Passing`. Both variants should include the student's grade in a `u32`
