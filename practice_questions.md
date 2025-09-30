@@ -7,7 +7,7 @@ For the following questions, write your solutions on pencil and paper. When comp
 Write a function `factorial()` that for an input `n`:
 
 - Takes input `n` (think about what type this should be)
-- RETURNS an Error "Too Large" if `n > 20`
+- PANICS with an Error "Too Large" if `n > 20`
 - Otherwise calculates the factorial of `n` recursively
 
 > Thought question: If `fn main() -> {}` uses factorial should it use `.expect()`, `.unwrap()`, or `?`
