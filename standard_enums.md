@@ -57,6 +57,10 @@ fn unwraps_enum(e: Option<i32>)
 
 ```
 
+## How does this actually work?
+
+To get further clarification on what expect, unwrap and ? actually DO, take a look at [main.rs](`./src/main.rs`) for more details 
+
 ## Practice Classification (`Option`, `Result`, or `panic`)
 
 1. Looking up a key in a hashmap
