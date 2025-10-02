@@ -10,8 +10,6 @@ Write a function `factorial()` that for an input `n`:
 - PANICS with an Error "Too Large" if `n > 20`
 - Otherwise calculates the factorial of `n` recursively or iteratively
 
-> Thought question: If `fn main() -> {}` uses factorial should it use `.expect()`, `.unwrap()`, or `?`
-
 ## Q2: Student Grading
 
 Define an enum `Grade` with two possible fields, `Failing` and `Passing`. Both variants should include the student's grade in a `u32`
@@ -44,6 +42,43 @@ Implement a function `status_message`:
 
 ## Example Answers
 
-```rust
+### Q1
 
+```rust
+// NOTE: u64 or larger is required for 20!
+// i64 technically works, but should not be used since we only take factorials
+// of positive numbers
+
+///Example recursive solution
+fn factorial(n: u64) -> u64{
+    if n > 20 {
+        panic!("Too Large!");
+    }
+
+    if n == 0 {
+        return 1;
+    }
+
+    return n * factorial(n -1);
+}
+
+
+/// Example iterative sol
+fn factorial_iter(n: u64) -> u64{
+    if n > 20 {
+        panic!("Too Large")
+    }
+
+    let mut fact = 1;
+    //INCLUSIVE range necessary
+    for i in 1..=n{
+        fact = fact * i;
+    }
+
+    return fact;
+}
 ```
+
+### Q2
+
+
