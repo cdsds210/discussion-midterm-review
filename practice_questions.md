@@ -81,4 +81,21 @@ fn factorial_iter(n: u64) -> u64{
 
 ### Q2
 
+```rust
+enum Grade {
+    Passing(u32),
+    Failing(u32)
+}
 
+fn is_passing(grade: Grade) -> bool{
+    return match grade{
+        // NOTE: Using underscore here allows pattern matching despite value
+        Grade::Passing(_) => true,
+        // Grade::Passing(v) => true, IS ALSO CORRECT
+        // Grade::Passing => true, IS NOT CORRECT
+        Grade::Failing(_) => false
+    }
+}
+```
+
+### Q3
