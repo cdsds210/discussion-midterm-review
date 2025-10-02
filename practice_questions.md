@@ -99,3 +99,35 @@ fn is_passing(grade: Grade) -> bool{
 ```
 
 ### Q3
+
+```rust
+//usize is used because the index of iteration is of type `usize`
+fn sum_positive_indices(arr: &[i32]) -> usize {
+    let len = arr.len();
+    let mut total = 0;
+    for index in 0..len{
+        let value = arr[index];
+
+        if value > 0 {
+            // NOTE: Sums by INDEX not value
+            total += index;
+        }
+    }
+
+    return total;
+}
+
+/// Cleaner implementation using .iter().enumerate()
+fn sum_positive_indices_without_range(arr: &[i32]) -> usize {
+    let mut total = 0;
+    // NOTE TAKING THE REFERENCE OF VALUE for proper behavior
+    for (index, &value) in arr.iter().enumerate(){
+        // If used (index, value during iteration) this line has to be 
+        // if value > &0
+        if value > 0 {
+            total += index;
+        }
+    }
+    total
+}
+```
