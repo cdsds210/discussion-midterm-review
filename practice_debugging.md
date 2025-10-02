@@ -37,7 +37,7 @@ fn main() {
 ## C
 
 ```rust
-fn fibonacci(n: u32) -> u32 {
+fn fibonacci(n: u8) -> u8 {
     if n > 20 {
         return Err("Too Large");
     }
@@ -51,6 +51,12 @@ fn main() {
 }
 ```
 
-Fix: the function tries to return `Err(...)` but the signature says `-> u64`. Change the signature to `-> Result<u64, &'static str>` and wrap returns with `Ok(...)`, or remove the `Err` branch and handle limits differently.
+## Answers
+
+- A: Unmatched Yellow Branch. Add a branch for `Light::Yellow => println!("Wait!")`
+- B: Use `x == 2` for comparison
+- C: To keep the return `u8`, Instead of returning `Err` the function should `panic!()` instead. Remove the semicolon/add a return statement to the last line
+  - Alternatively, modify more of the function to return `Result<u8, String>` (`Err(String::from("Too Large!)))`, `if n == 0 {return Ok(1)}`, and `return fibonacci(n-1)? + fibonacci(n-2)?`)
+  - Bonus stylistic bug: `u8` is WAY too small to contain the 20th fibonacci number. What type would be the smallest that allows this?
 
 ---

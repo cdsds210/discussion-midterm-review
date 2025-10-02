@@ -8,7 +8,7 @@ Write a function `factorial()` that for an input `n`:
 
 - Takes input `n` (think about what type this should be)
 - PANICS with an Error "Too Large" if `n > 20`
-- Otherwise calculates the factorial of `n` recursively
+- Otherwise calculates the factorial of `n` recursively or iteratively
 
 > Thought question: If `fn main() -> {}` uses factorial should it use `.expect()`, `.unwrap()`, or `?`
 
@@ -41,3 +41,9 @@ Implement a function `status_message`:
 
 - `status_message(BookStatus::Available)` -> "This book is available!"
 - `status_message(BookStatus::CheckedOut(String::from("Alice")))` -> "This book is currently checked out by Alice."
+
+## Example Answers
+
+```rust
+
+```
