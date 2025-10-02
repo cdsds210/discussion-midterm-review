@@ -131,3 +131,19 @@ fn sum_positive_indices_without_range(arr: &[i32]) -> usize {
     total
 }
 ```
+
+### Q4
+
+```rust
+enum BookStatus{
+    Available,
+    CheckedOut(String)
+}
+
+fn status_message(status: BookStatus){
+    match status{
+        BookStatus::Available => println!("This book is available"),
+        BookStatus::CheckedOut(name) => println!("This book is currently checked out by {}", name),
+    }
+}
+```
